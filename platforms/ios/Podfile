@@ -1,0 +1,23 @@
+use_frameworks!
+
+target "foodmedv01" do
+platform :ios,'9.0'
+
+
+pod 'Socket.IO-Client-Swift', :git => 'https://github.com/triniwiz/socket.io-client-swift.git'
+
+pod 'Toast', '~> 3.0'
+
+pod 'QBImagePickerController', '~> 3.4.0'
+
+pod 'OMGHTTPURLRQ' ,'~> 3.2.4'
+
+
+post_install do |installer_representation|
+  installer_representation.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'
+    end
+  end
+end
+end

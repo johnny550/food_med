@@ -1,0 +1,222 @@
+// NativeScript core theme
+// @see https://docs.nativescript.org/ui/theme
+@import '~nativescript-theme-core/scss/ruby';
+
+// Override variables here
+
+@import '~nativescript-theme-core/scss/index';
+
+// Global SCSS styling
+// @see https://docs.nativescript.org/ui/styling
+
+
+
+ActionBar {
+    background-color: #53ba82;
+    color: #ffffff;
+}
+
+.title {
+    text-align: left;
+    padding-left: 16;
+}
+
+.message {
+    vertical-align: center;
+    text-align: center;
+    font-size: 20;
+    color: #333333;
+}
+
+.drawer-header {
+    padding: 50 16 16 16;
+    margin-bottom: 16;
+    background-color: #53ba82;
+    color: #ffffff;
+    font-size: 24;
+}
+
+.drawer-item {
+    padding: 8 16;
+    color: #333333;
+    font-size: 16;
+}
+
+
+.border-bottom{
+    border-bottom-width: 1;
+    border-bottom-color: white;
+    margin-bottom: 40;
+    padding-bottom: 8
+}
+
+.form-input{
+    color:white;
+    placeholder-color: white
+}
+
+.icon-margin{
+    margin-right:10
+}
+.icon-margin-more{
+    margin-right:50
+}
+
+.check-drawer{
+    margin-right: 5%;
+    margin-left: 10%;
+}
+.my-button{
+    background-color: rgb(72, 176, 182);
+    color: white;
+    font-weight: bold;
+    border-radius: 25;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    text-transform: uppercase;
+    letter-spacing: 0.1;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.full-height{
+    height:100%;
+    margin-left: 15
+}
+.full-height-down{
+    margin-top: 10;
+    height:100%;
+}
+
+.logo-container{
+    width: 45%;
+    margin-bottom: 10%
+}
+
+.the-container{
+    margin-left: 10%;
+    margin-right: 10%
+}
+
+.condition-elements-meal-box{
+    text-align: center;
+    width: 80%;
+    height: 20%;
+    border-radius: 25;
+    border-style: solid;
+    border-width: 2;
+}
+.meals{
+    font-size: 20;
+    font-family: "Varela";
+    color: rgb(14, 13, 13);
+}
+
+.meal_image_container{
+    margin-top: 3%;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-left: 20%;
+    padding-right: 20%;
+    height: 25%;
+    border-radius: 25;
+    border-style: solid;
+    border-width: 2;
+}
+#img1{
+    padding-right: 5%;
+    width: 20%;
+    height: 25%
+}
+#img2{
+    padding-right: 5%;
+    width: 20%;
+    height: 25%
+}
+#img3{
+    padding-left: 5%;
+    width: 20%;
+    height: 25%
+}
+
+.questionnaire-style{
+    font-size: 20;
+    font-family: "Times New Roman", Times, serif;;
+    color: rgb(14, 13, 13);
+}
+
+.condition-elements-ingredients{
+    margin-top: 5%;
+    margin-left:10%;
+    margin-right: 10%;
+    text-align: center;
+}
+.condition-elements{
+    margin-top: 20;
+    margin-left:15;
+}
+.condition-elements-box-sliders{
+    margin-top: 10%;
+    margin-left:5%;
+    margin-right: 5%;
+}
+.slider_detail{
+    width: 100%;
+    height: 25%
+}
+
+.condition-elements-right{
+    margin-top: 80;
+    margin-right:10;
+}
+
+.el{
+    margin-top: 0;
+    font-size: 20;
+    font-family: "Varela";
+    color: black;
+    margin-bottom: 40;
+}
+.ann_police{
+    font-size: 20;
+    font-family: "Varela";
+    color: black;
+    margin-top: 10;
+    margin-left: 100;
+}
+.line{
+    width: 112px;
+    height: 47px;
+    border-bottom: 1px solid black;
+    position: absolute;
+    }
+.A_and_C{
+    font-size: 25;
+    font-family: "Varela";
+    color: rgb(14, 13, 13);
+}
+.el1{
+    font-size: 20;
+    font-family: "Varela";
+    color: rgb(240, 232, 232);
+}
+.test{
+    background: linear-gradient(to right, #39B994,#337FC7)
+}
+.announcer{
+    font-size: 15;
+    font-family: "Varela";
+    color: rgb(14, 13, 13);
+}
+
+.icon-left{
+    margin-left: 300;
+}
+
+.menu-bar{
+    background-color: #333333
+}
+
+.drawer-placer{
+    background-color: magenta 
+}
