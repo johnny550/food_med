@@ -96,6 +96,7 @@ import * as camera from "nativescript-camera";
 import * as imagepicker from "nativescript-imagepicker";
 import { ObservableArray } from "tns-core-modules/data/observable-array/observable-array";
 import { Image } from "tns-core-modules/ui/image";
+import newMeal from "../MealSubmission/NewM";
 
 import questions2 from "../NowMeal/Questions2";
 //import {Folder} from "tns-core-modules/file-system"
@@ -147,15 +148,7 @@ export default {
                   opt,
                   (imageData, dataUTI, orientation, info) => {
                     console.log(
-                      "image info ooooooooo" +
-                        info.objectForKey("PHImageFileURLKey").toString()
-                    );
-                    this.$store.commit(
-                      "setImagePath",
-                      info
-                        .objectForKey("PHImageFileURLKey")
-                        .toString()
-                        .replace("file://", "")
+                      info.objectForKey("PHImageFileURLKey").toString()
                     );
                   }
                 );
@@ -188,7 +181,7 @@ export default {
               width: 300,
               height: 300,
               keepAspectRatio: true,
-              saveToGallery: true
+              saveToGallery: false
             })
             .then(imageAsset => {
               if (imageAsset.ios) {
@@ -208,15 +201,7 @@ export default {
                     opt,
                     (imageData, dataUTI, orientation, info) => {
                       console.log(
-                        "info of image" +
-                          info.objectForKey("PHImageFileURLKey").toString()
-                      );
-                      this.$store.commit(
-                        "setImagePath",
-                        info
-                          .objectForKey("PHImageFileURLKey")
-                          .toString()
-                          .replace("file://", "")
+                        info.objectForKey("PHImageFileURLKey").toString()
                       );
                     }
                   );
@@ -250,7 +235,6 @@ export default {
     submit() {
       //submit to server
       // file path and url
-      console.log("testtesttest    " + this.$store.getters.imagePath);
       var file = this.$store.getters.imagePath;
       var url = "http://210.146.64.139:8080/MealRecorder/save_file";
 
@@ -275,12 +259,19 @@ export default {
       var task = session.multipartUpload(params, imageFile);
       task.on("complete", event => {
         console.log("Uploaded `" + this.images + "`");
+        this.$store.commit("setImageRecuperee", false);
+        alert("Image uploaded").then(() => {
+        this.$navigateTo(newMeal);
+        });
       });
       task.on("error", event => {
         console.log(event);
         console.log("Could not upload `" + this.images + "`. " + event.error);
+        this.$store.commit("setImageRecuperee", false);
+        alert("Image not uploaded").then(() => {
+          console.log("Alert dialog closed.");
+        });
       });
-      this.$store.commit("setImagePath", "");
     },
     goBack() {
       this.$store.commit("setImageRecuperee", false);

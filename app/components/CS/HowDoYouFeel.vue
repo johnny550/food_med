@@ -49,7 +49,7 @@
           </v-template>
         </RadListView>
 
-        <FlexBoxLayout flexDirection="row" justifyContent="center" class="full-height">
+        <FlexBoxLayout flexDirection="column" justifyContent="center" class="full-height">
           <Image
             src="~/assets/images/icon_progress.png"
             width="50"

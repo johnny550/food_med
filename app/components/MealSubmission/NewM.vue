@@ -14,9 +14,9 @@
                 <Label class="drawer-item" text="Logout"/>
             </StackLayout>
 
-            <GridLayout ~mainContent columns="auto" rows="auto">
+            <StackLayout ~mainContent columns="auto" rows="auto">
                 <Button class="my-button" text="New meal" @tap="addANewMeal"/>
-            </GridLayout>
+            </StackLayout>
       </RadSideDrawer>
 
           </Page>

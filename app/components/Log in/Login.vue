@@ -34,9 +34,9 @@ export default {
   },
   methods: {
     onButtonTap() {
-      //this.$router.pushClear('NewMeal')
       this.$navigateTo(newm);
     }
   }
 };
 </script>
+

@@ -28,10 +28,9 @@
             @itemDeselected="deselection"
             selectionBehavior="Press"
             multipleSelection="false"
-            height= "100%"
           >
             <v-template>
-              <StackLayout orientation="vertical">
+              <StackLayout class="item" orientation="vertical">
                 <Label :text="meal.name" class="meals"></Label>
               </StackLayout>
             </v-template>
@@ -142,3 +141,4 @@ export default {
   }
 };
 </script>
+
